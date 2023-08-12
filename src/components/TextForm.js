@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
-const TextForm = (props) => {
+const TextForm = (props) => {  
+    
+    const [text, setText] = useState("");
   
     const handleupclick = ()=>{
        
@@ -33,7 +35,7 @@ const TextForm = (props) => {
        
         setText(event.target.value)
     }
-    const [text, setText] = useState("");
+
   return (
       
 
@@ -41,7 +43,7 @@ const TextForm = (props) => {
     <div className='container mx-3'>
         <h1 className='mb-3'>{props.heading}</h1>
 <div className="mb-3">
-<textarea className="form-control"  value= {text} onChange={handleOnChange}  style = {{backgroundColor: props.mode==="dark"?"grey":"white" , color: props.mode === "dark"?"white":"black"}}id="mybox" rows="15"></textarea>
+<textarea className="form-control"  value= {text} onChange={handleOnChange}  style = {{backgroundColor: props.mode==="dark"?"grey":"white" , color: props.mode === "dark"?"white":"black"}} id="mybox" rows="15"></textarea>
 </div>
 <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick = {handleupclick} >Convert to UpperCase </button>
 <button disabled={text.length===0} className="btn btn-success mx-3 my-1" onClick = {handleupclick2} >Convert to Lowercase </button>
@@ -53,6 +55,7 @@ const TextForm = (props) => {
 <h2>Text Summary</h2>
 <p>{text.split(/\s+/).filter((element)=>{ return element.length !== 0}).length} words {text.length} character</p>
 </div>
+
    </>
   )
 }

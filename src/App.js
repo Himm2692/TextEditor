@@ -6,7 +6,7 @@ import TextForm from './components/TextForm';
 import {
   BrowserRouter,
   Routes,
-  Route,
+  Route
  
 } from "react-router-dom"
 import About from './components/About';
@@ -39,14 +39,14 @@ function App() {
 
   return (
     <>
-   <BrowserRouter>
+   <BrowserRouter basename='/TextEditor'>
    <Navbar title="TextEditor" mode = {mode} toggleMode = {toggleMode}/>
     <Alert alert ={alert}/>
    <div className='container my-3'>
    <Routes>
           <Route path="/about" element={<About title="About Us"/>}/>
             
-          <Route path="/" element={<TextForm heading = " Try TextEditor- Word counter, Character counter"  mode = {mode} showAlert={showAlert}/>}/>
+          <Route exact path="/" element={<TextForm heading = " Try TextEditor- Word counter, Character counter"  mode = {mode} showAlert={showAlert}/>}/>
             
     </Routes>
    </div>

@@ -13,7 +13,7 @@ const About = (props) => {
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-        TextUtils gives you a way to analyse Your text quickly and efficiently. Be it word count,character count or uppercase to lowercase & lowercase to uppercase 
+        TextEditor gives you a way to analyse Your text quickly and efficiently. Be it word count,character count or uppercase to lowercase & lowercase to uppercase 
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@ const About = (props) => {
     </h2>
     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-        TextUtils is a free character counter tool that provides instant character count & word count statics for a given text Textutils reports the number od woeds and character.
+        TextEditor is a free character counter tool that provides instant character count & word count statics for a given text Textutils reports the number od woeds and character.
       </div>
     </div>
   </div>
